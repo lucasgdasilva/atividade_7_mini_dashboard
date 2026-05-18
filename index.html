@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <title>Dashboard Brasileirão 2025</title>
+</head>
+
+<body>
+  <header>
+    <div class="espaco-titulo flex">
+      <img src="https://www.ogol.com.br//img/logos/edicoes/184443_imgbank_.png" alt="Logo do Brasileirão"
+        class="imagem" />
+      <p class="titulo">Brasileirão 2025</p>
+    </div>
+    <div class="menu">
+      <div class="navbar">
+        <a href="#jogadores" class="item-navbar">Jogadores</a>
+        <a href="#goleiros" class="item-navbar">Goleiros</a>
+        <a href="#times" class="item-navbar">Times</a>
+        <a href="#classificacao" class="item-navbar">Tabela</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="jogadores" id="jogadores">
+
+      <h1>Estatísticas de Jogadores</h1>
+
+      <div class="estatisticas flex" id="gols">
+
+        <div class="espaco-grafico">
+          <h2>Líderes em gols</h2>
+
+          <div class="grafico" id="artilheiros"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Líderes em assistências</h2>
+          
+          <div class="grafico" id="assistencias"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Líderes em gols + assistências</h2>
+          
+          <div class="grafico" id="golsAssistencias"></div>
+        </div>
+      </div>
+
+      <div class="estatisticas flex" id="gols">
+
+        <div class="espaco-grafico">
+          <h2>Cartões amarelos</h2>
+
+          <div class="grafico" id="cartoesAmarelos"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Cartões vermelhos</h2>
+          
+          <div class="grafico" id="cartoesVermelhos"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Minutos jogados</h2>
+          
+          <div class="grafico" id="minutosJogados"></div>
+        </div>
+      </div>
+
+    </div>  
+
+    <div class="jogadores" id="goleiros">
+
+      <h1>Estatísticas de Goleiros</h1>
+
+      <div class="estatisticas flex" id="gols">
+
+        <div class="espaco-grafico">
+          <h2>Fichas limpas</h2>
+
+          <div class="grafico" id="fichasLimpas"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Porcentagem de defesas</h2>
+          
+          <div class="grafico" id="porcentagemDefesas"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Média de defesas por jogo</h2>
+          
+          <div class="grafico" id="mediaDefesas"></div>
+        </div>
+      </div>
+
+    </div> 
+
+    <div class="jogadores" id="times">
+
+      <h1>Estatísticas de Times</h1>
+
+      <div class="estatisticas flex" id="gols">
+
+        <div class="espaco-grafico">
+          <h2>Gols marcados</h2>
+
+          <div class="grafico" id="graficoGols"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Gols sofridos</h2>
+          
+          <div class="grafico" id="graficoGolsSofridos"></div>
+        </div>
+
+        <div class="espaco-grafico">
+          <h2>Cartões amarelos</h2>
+          
+          <div class="grafico" id="graficoCartoesAmarelos"></div>
+        </div>
+      </div>
+    
+    <h2>Avaliar Jogadores</h2>
+
+      <div class="resumo">
+        <p>Total de avaliações: <span id="totalAvaliacoes"></span></p>
+        <p>Média das notas: <span id="mediaNotas"></span></p>
+        <p>Maior nota: <span id="maxNota"></span></p>
+      </div>
+
+      <div id="avaliacoesContainer" class="cards-container"></div>
+
+      <div class="form-section">
+        <h3>Dar nota a um jogador</h3>
+        <form id="addRatingForm">
+          <select id="playerSelect" required>
+            <option value="">Selecione o jogador</option>
+            <option value="Kaio JORGE (CRU)">Kaio JORGE (CRU)</option>
+            <option value="Giorgian DE ARRASCAETA (FLA)">Giorgian DE ARRASCAETA (FLA)</option>
+            <option value="Vitor ROQUE (PAL)">Vitor ROQUE (PAL)</option>
+            <option value="RAYAN (VAS)">RAYAN (VAS)</option>
+            <option value="Pablo VEGETTI (VAS)">Pablo VEGETTI (VAS)</option>
+          </select>
+          <input type="number" id="playerRating" placeholder="Nota (0-10)" min="0" max="10" required>
+          <button type="submit">Adicionar</button>
+          <button id="clearBtn">Limpar avaliações</button>
+        </form>
+      </div>
+
+    <div class="classificacao" id="classificacao">
+      <h1>Tabela de classificação</h1>
+      <div class="tabela" id="tabela"></div>
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>
+      © 2026 Lucas Gabriel da Silva, Guilherme Schroeder, Arthur Adriano de
+      Oliveira, Lukas Fischer Stolle. Todos os direitos reservados.
+    </p>
+    <p>
+      <br />Todos os logotipos, marcas registradas e dados estatísticos são
+      propriedade da Confederação Brasileira de Futebol (CBF) e dos
+      respectivos clubes. <br />
+      Este projeto tem caráter exclusivamente educacional e não possui
+      qualquer vínculo oficial com a CBF ou com o Campeonato Brasileiro.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
